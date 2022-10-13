@@ -1,1 +1,40 @@
+//WAP to create a class which contain the method Palindrome .the second class will use the property of first class and display the output."
 
+package ThursdayLab_13Oct;
+
+public class Single_Ineritance extends Palindrome
+{
+
+	public static void main(String[] args) {
+		
+		Single_Ineritance obj= new Single_Ineritance();
+		obj.palindrome();
+	}
+
+}
+
+package ThursdayLab_13Oct;
+
+import java.util.Scanner;
+
+public class Palindrome
+{
+	public void palindrome()
+	{
+	int r,sum=0,temp;
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter number");
+	  int n=sc.nextInt();//It is the number variable to be checked for palindrome  
+	  
+	  temp=n;    
+	  while(n>0){    
+	   r=n%10;  //getting remainder  
+	   sum=(sum*10)+r;    
+	   n=n/10;    
+	  }    
+	  if(temp==sum)    
+	   System.out.println("palindrome number ");    
+	  else    
+	   System.out.println("not palindrome");    
+	}  
+	}  
